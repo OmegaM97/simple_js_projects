@@ -13,6 +13,7 @@ body {
 }
 
 .container {
+  padding: 20px;
   min-height: 130px;
   min-width: 600px;
   border-radius: 40px;
