@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Weather App</title>
+</head>
+<body>
+  <div class="container">
+
+    <div class="app-name inner-container">Weather App</div>
+
+    <div class="search-country inner-container">
+      <div>
+        <input list="countries" id="country" name="country" placeholder="Search City" class="search-input">
+        <datalist id="countries">
+        <option value="Kabul - Afghanistan"></option>
+        <option value="Tirana - Albania"></option>
+        <option value="Algiers - Algeria"></option>
+        <option value="Andorra la Vella - Andorra"></option>
+        <option value="Luanda - Angola"></option>
+        <option value="Saint John's - Antigua and Barbuda"></option>
+        <option value="Buenos Aires - Argentina"></option>
+        <option value="Yerevan - Armenia"></option>
+        <option value="Canberra - Australia"></option>
+        <option value="Vienna - Austria"></option>
+        <option value="Baku - Azerbaijan"></option>
+        <option value="Nassau - Bahamas"></option>
+        <option value="Manama - Bahrain"></option>
+        <option value="Dhaka - Bangladesh"></option>
+        <option value="Bridgetown - Barbados"></option>
+        <option value="Minsk - Belarus"></option>
+        <option value="Brussels - Belgium"></option>
+        <option value="Belmopan - Belize"></option>
+        <option value="Porto-Novo - Benin"></option>
+        <option value="Thimphu - Bhutan"></option>
+        <option value="La Paz - Bolivia"></option>
+        <option value="Sarajevo - Bosnia and Herzegovina"></option>
+        <option value="Gaborone - Botswana"></option>
+        <option value="Brasília - Brazil"></option>
+        <option value="Bandar Seri Begawan - Brunei"></option>
+        <option value="Sofia - Bulgaria"></option>
+        <option value="Ouagadougou - Burkina Faso"></option>
+        <option value="Gitega - Burundi"></option>
+        <option value="Phnom Penh - Cambodia"></option>
+        <option value="Yaoundé - Cameroon"></option>
+        <option value="Ottawa - Canada"></option>
+        <option value="Praia - Cape Verde"></option>
+        <option value="Bangui - Central African Republic"></option>
+        <option value="N'Djamena - Chad"></option>
+        <option value="Santiago - Chile"></option>
+        <option value="Beijing - China"></option>
+        <option value="Bogotá - Colombia"></option>
+        <option value="Moroni - Comoros"></option>
+        <option value="Kinshasa - Democratic Republic of the Congo"></option>
+        <option value="Brazzaville - Republic of the Congo"></option>
+        <option value="San José - Costa Rica"></option>
+        <option value="Zagreb - Croatia"></option>
+        <option value="Havana - Cuba"></option>
+        <option value="Nicosia - Cyprus"></option>
+        <option value="Prague - Czech Republic"></option>
+        <option value="Copenhagen - Denmark"></option>
+        <option value="Djibouti - Djibouti"></option>
+        <option value="Roseau - Dominica"></option>
+        <option value="Santo Domingo - Dominican Republic"></option>
+        <option value="Quito - Ecuador"></option>
+        <option value="Cairo - Egypt"></option>
+        <option value="San Salvador - El Salvador"></option>
+        <option value="Malabo - Equatorial Guinea"></option>
+        <option value="Asmara - Eritrea"></option>
+        <option value="Tallinn - Estonia"></option>
+        <option value="Mbabane - Eswatini"></option>
+        <option value="Addis Ababa - Ethiopia"></option>
+        <option value="Suva - Fiji"></option>
+        <option value="Helsinki - Finland"></option>
+        <option value="Paris - France"></option>
+        <option value="Libreville - Gabon"></option>
+        <option value="Banjul - Gambia"></option>
+        <option value="Tbilisi - Georgia"></option>
+        <option value="Berlin - Germany"></option>
+        <option value="Accra - Ghana"></option>
+        <option value="Athens - Greece"></option>
+        <option value="Saint George's - Grenada"></option>
+        <option value="Guatemala City - Guatemala"></option>
+        <option value="Conakry - Guinea"></option>
+        <option value="Bissau - Guinea-Bissau"></option>
+        <option value="Georgetown - Guyana"></option>
+        <option value="Port-au-Prince - Haiti"></option>
+        <option value="Tegucigalpa - Honduras"></option>
+        <option value="Budapest - Hungary"></option>
+        <option value="Reykjavík - Iceland"></option>
+        <option value="New Delhi - India"></option>
+        <option value="Jakarta - Indonesia"></option>
+        <option value="Tehran - Iran"></option>
+        <option value="Baghdad - Iraq"></option>
+        <option value="Dublin - Ireland"></option>
+        <option value="Jerusalem - Israel"></option>
+        <option value="Rome - Italy"></option>
+        <option value="Kingston - Jamaica"></option>
+        <option value="Tokyo - Japan"></option>
+        <option value="Amman - Jordan"></option>
+        <option value="Nur-Sultan - Kazakhstan"></option>
+        <option value="Nairobi - Kenya"></option>
+        <option value="Tarawa - Kiribati"></option>
+        <option value="Pristina - Kosovo"></option>
+        <option value="Kuwait City - Kuwait"></option>
+        <option value="Bishkek - Kyrgyzstan"></option>
+        <option value="Vientiane - Laos"></option>
+        <option value="Riga - Latvia"></option>
+        <option value="Beirut - Lebanon"></option>
+        <option value="Maseru - Lesotho"></option>
+        <option value="Monrovia - Liberia"></option>
+        <option value="Tripoli - Libya"></option>
+        <option value="Vaduz - Liechtenstein"></option>
+        <option value="Vilnius - Lithuania"></option>
+        <option value="Luxembourg - Luxembourg"></option>
+        <option value="Antananarivo - Madagascar"></option>
+        <option value="Lilongwe - Malawi"></option>
+        <option value="Kuala Lumpur - Malaysia"></option>
+        <option value="Malé - Maldives"></option>
+        <option value="Bamako - Mali"></option>
+        <option value="Valletta - Malta"></option>
+        <option value="Majuro - Marshall Islands"></option>
+        <option value="Nouakchott - Mauritania"></option>
+        <option value="Port Louis - Mauritius"></option>
+        <option value="Mexico City - Mexico"></option>
+        <option value="Palikir - Micronesia"></option>
+        <option value="Chisinau - Moldova"></option>
+        <option value="Monaco - Monaco"></option>
+        <option value="Ulaanbaatar - Mongolia"></option>
+        <option value="Podgorica - Montenegro"></option>
+        <option value="Rabat - Morocco"></option>
+        <option value="Maputo - Mozambique"></option>
+        <option value="Naypyidaw - Myanmar"></option>
+        <option value="Windhoek - Namibia"></option>
+        <option value="Yaren - Nauru"></option>
+        <option value="Kathmandu - Nepal"></option>
+        <option value="Amsterdam - Netherlands"></option>
+        <option value="Wellington - New Zealand"></option>
+        <option value="Managua - Nicaragua"></option>
+        <option value="Niamey - Niger"></option>
+        <option value="Abuja - Nigeria"></option>
+        <option value="Pyongyang - North Korea"></option>
+        <option value="Skopje - North Macedonia"></option>
+        <option value="Oslo - Norway"></option>
+        <option value="Muscat - Oman"></option>
+        <option value="Islamabad - Pakistan"></option>
+        <option value="Ngerulmud - Palau"></option>
+        <option value="Panama City - Panama"></option>
+        <option value="Port Moresby - Papua New Guinea"></option>
+        <option value="Asunción - Paraguay"></option>
+        <option value="Lima - Peru"></option>
+        <option value="Manila - Philippines"></option>
+        <option value="Warsaw - Poland"></option>
+        <option value="Lisbon - Portugal"></option>
+        <option value="Doha - Qatar"></option>
+        <option value="Bucharest - Romania"></option>
+        <option value="Moscow - Russia"></option>
+        <option value="Kigali - Rwanda"></option>
+        <option value="Basseterre - Saint Kitts and Nevis"></option>
+        <option value="Castries - Saint Lucia"></option>
+        <option value="Kingstown - Saint Vincent and the Grenadines"></option>
+        <option value="Apia - Samoa"></option>
+        <option value="San Marino - San Marino"></option>
+        <option value="São Tomé - São Tomé and Príncipe"></option>
+        <option value="Riyadh - Saudi Arabia"></option>
+        <option value="Dakar - Senegal"></option>
+        <option value="Belgrade - Serbia"></option>
+        <option value="Victoria - Seychelles"></option>
+        <option value="Freetown - Sierra Leone"></option>
+        <option value="Singapore - Singapore"></option>
+        <option value="Bratislava - Slovakia"></option>
+        <option value="Ljubljana - Slovenia"></option>
+        <option value="Honiara - Solomon Islands"></option>
+        <option value="Mogadishu - Somalia"></option>
+        <option value="Pretoria - South Africa"></option>
+        <option value="Seoul - South Korea"></option>
+        <option value="Juba - South Sudan"></option>
+        <option value="Madrid - Spain"></option>
+        <option value="Colombo - Sri Lanka"></option>
+        <option value="Khartoum - Sudan"></option>
+        <option value="Paramaribo - Suriname"></option>
+        <option value="Stockholm - Sweden"></option>
+        <option value="Bern - Switzerland"></option>
+        <option value="Damascus - Syria"></option>
+        <option value="Taipei - Taiwan"></option>
+        <option value="Dushanbe - Tajikistan"></option>
+        <option value="Dodoma - Tanzania"></option>
+        <option value="Bangkok - Thailand"></option>
+        <option value="Dili - Timor-Leste"></option>
+        <option value="Lomé - Togo"></option>
+        <option value="Nukuʻalofa - Tonga"></option>
+        <option value="Port of Spain - Trinidad and Tobago"></option>
+        <option value="Tunis - Tunisia"></option>
+        <option value="Ankara - Turkey"></option>
+        <option value="Ashgabat - Turkmenistan"></option>
+        <option value="Funafuti - Tuvalu"></option>
+        <option value="Kampala - Uganda"></option>
+        <option value="Kyiv - Ukraine"></option>
+        <option value="Abu Dhabi - United Arab Emirates"></option>
+        <option value="London - United Kingdom"></option>
+        <option value="Washington, D.C. - United States"></option>
+        <option value="Montevideo - Uruguay"></option>
+        <option value="Tashkent - Uzbekistan"></option>
+        <option value="Port Vila - Vanuatu"></option>
+        <option value="Vatican City - Vatican City"></option>
+        <option value="Caracas - Venezuela"></option>
+        <option value="Hanoi - Vietnam"></option>
+        <option value="Sana'a - Yemen"></option>
+        <option value="Lusaka - Zambia"></option>
+        <option value="Harare - Zimbabwe"></option>
+        </datalist>
+      </div>
+      <button class="search-button"><img src="images/search-icon.png" alt="" class="search-icon"></button>     
+    </div>
+
+    <div class="location inner-container">
+      <img src="images/location-icon.png" alt="location-icon" class="location-icon">
+      <div class="location-name">Addis Ababa, Ethiopia</div>
+    </div>
+
+    <div class="weather-icon inner-container"> 
+      <img src="images/Snow.png" alt="">
+    </div>
+
+    <div class="weather-description inner-container">Snow</div>
+
+    <br>
+    <div class="temprature inner-container">Feels like 22.5<sup>&deg;</sup>C</div>
+
+    <div class="humidity inner-container">Humidity: 48%</div>
+
+    <div class="wind-speed inner-container">
+      Wind speed: 3.1km/h
+    </div>
+  </div>
+</body>
+</html>

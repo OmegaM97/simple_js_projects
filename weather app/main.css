@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: rgb(171, 211, 247);
+  display: grid;
+  place-content: center;
+  font-family: 'Lucida Sans';
+}
+
+.container {
+  min-height: 50vh;
+  min-width: 450px;
+  background-image: linear-gradient(rgb(5, 176, 206, 0.5), rgb(9, 79, 209, 0.5), rgb(68, 9, 177,0.5));
+  border-radius: 90px;
+  display: grid;
+  place-content: center;
+  padding: 25px;
+  gap: 20px;
+}
+
+.inner-container {
+  margin: 0;
+  display: grid;
+  place-content: center;
+}
+
+.location {
+  display: flex;
+}
+
+.location-icon {
+  height: 20px;
+  width: 20px;
+}
+
+.location-name {
+  font-size: 1.3rem;
+  color: rgb(238, 225, 226);
+}
+
+.app-name {
+  font-size: 2rem;
+  color: rgb(203, 245, 18);
+}
+
+.search-country {
+  display: grid;
+  grid-auto-flow: column;
+  padding-left: 40px;
+}
+
+.search-input {
+  font-size: 1.1rem;
+  padding: 8px;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+  outline: none;
+}
+
+.search-button {
+  background-color: rgb(85, 189, 85);
+  border: none;
+  transform: translateX(-35px);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.search-icon {
+  height: 30px;
+  width: 35px;
+}
+
+.temprature {
+  display: flex;
+}
+
+
+.weather-description {
+  white-space: nowrap;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(255, 183, 88); 
+}
+
+.temprature,
+.humidity,
+.wind-speed {
+  white-space: nowrap;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(233, 241, 153);
+}
+
+sup {
+  transform: translateY(-3px);
+  font-size: 1.5rem;
+}
