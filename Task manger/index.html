@@ -7,15 +7,25 @@
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
+
+  <!--a container used for all the content of the page-->
   <div class="container">
+
+    <!--a container for the input elements that used for entering the task lists-->
     <div class="input-btn-container">
-      <input class="input-task js-input-task" type="text">
-      <input class="input-date js-input-date" type="date">
+      <input class="input-task js-input-task" type="text" required>
+      <input class="input-date js-input-date" type="date" required>
       <button class="add-btn js-add-btn">Add</button>
     </div>
 
+    <!--container used to render the task lists-->
     <div class="list-container js-list-container">
     </div>
+
+    <!--clear all button to clear all the tasks-->
+    <div class="clear-all-div js-clear-all-div"></div>
+
+
   </div>
 
   <script src="main.js"></script>

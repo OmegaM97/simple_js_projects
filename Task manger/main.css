@@ -1,3 +1,4 @@
+/*reset*/
 * {
   margin: 0;
   padding: 0;
@@ -33,61 +34,32 @@ body {
   padding: 10px;
 }
 
-.add-btn {
-  background-color: rgb(5, 185, 35);
-  padding: 2px 20px;
-  font-size: 1.3rem;
-  color: rgb(219, 219, 218);
-  cursor: pointer;
-  border: none;
-  margin: none;
+.list-container,
+.input-btn-container {
+  width: 525px;
 }
 
-li {
-  margin: 10px;
-  display: grid;
-  grid-template-columns: 4.06fr 1.3fr 1fr;
-  gap: 5px;
-  justify-content: space-between;
-  font-size: 1.2rem;
-}
-
-li button {
-  background-color: rgb(179, 42, 42);
-  border: none;
-  font-size: 1.2rem;
-  padding: 2px 5px;
-  color: aliceblue;
-  cursor: pointer;
-}
-
-li button:hover {
-  background-color: white;
-  color: rgb(179, 42, 42);
-  border: 2px solid rgb(179, 42, 42);
-
-}
-
-.add-btn:hover {
-  background-color: white;
-  color: rgb(5, 185, 35);
-  border: 2px solid rgb(5, 185, 35);
+.list-container {
+  margin-top: 1rem;
 }
 
 .wrap {
   white-space: wrap;
   display: grid;
+  place-content: center;
   grid-template-columns: 1fr 100fr;
   gap: 10px;
 }
 
 .nowrap {
   white-space: nowrap;
+  place-content: center;
 }
 
-.list-container,
-.input-btn-container {
-  width: 525px;
+span {
+  width: 85%;
+  text-align: justify;
+  font-size: 1.3rem;
 }
 
 .input-radio {
@@ -103,6 +75,108 @@ li button:hover {
   color: gray;
 }
 
-span {
+.add-btn {
+  background-color: rgb(5, 185, 35);
+  padding: 2px 20px;
   font-size: 1.3rem;
+  color: rgb(219, 219, 218);
+  cursor: pointer;
+  border: 2px solid white;
+  margin: none;
+}
+
+.add-btn:hover {
+  background-color: white;
+  color: rgb(5, 185, 35);
+  border: 2px solid rgb(5, 185, 35);
+}
+
+li {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 4.06fr 1.3fr 1fr;
+  gap: 5px;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+
+.remove-btn-div {
+  place-content: center;
+}
+
+li button {
+  background-color: rgb(179, 42, 42);
+  border: none;
+  width: 81.5px;
+  height: 26.5px;
+  font-size: 1.2rem;
+  padding: 2px 5px;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+li button:hover {
+  background-color: white;
+  color: rgb(179, 42, 42);
+  border: 2px solid rgb(179, 42, 42);
+}
+
+.clear-all-div {
+  margin-top: 1rem;
+  display: grid;
+  place-content: center;
+  font-size: 18px;
+}
+
+.clear-all-btn {
+  font-size: 1.2rem;
+  padding: 8px;
+  background-color: rgb(207, 4, 4);
+  color: aliceblue;
+  border: 2px solid white;
+}
+
+.clear-all-btn:hover {
+  background-color: white;
+  color: rgb(207, 4, 4);
+  border: 2px solid rgb(207, 4, 4);
+}
+
+.yes-or-no-span {
+  display: grid;
+  place-content: center;
+  grid-auto-flow: column;
+  gap: 5px;
+}
+
+.yes-btn,
+.no-btn {
+  font-size: 1.1rem;
+  padding: 5px;
+}
+
+.yes-btn {
+  color: aliceblue;
+  background-color: rgb(207, 4, 4);
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.yes-btn:hover {
+  color: rgb(207, 4, 4);
+  background-color: white;
+  border: 2px solid rgb(207, 4, 4);
+}
+
+.no-btn {
+  color: aliceblue;
+  background-color: rgb(5, 185, 35);
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.no-btn:hover {
+  color: rgb(5, 185, 35);
+  background-color: white;
+  border: 2px solid rgb(5, 185, 35);
 }
