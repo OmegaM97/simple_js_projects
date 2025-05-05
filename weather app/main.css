@@ -101,3 +101,9 @@ sup {
   transform: translateY(-3px);
   font-size: 1.5rem;
 }
+
+.generate-div {
+  display: grid;
+  place-content: center;
+  gap: 15px;
+}
