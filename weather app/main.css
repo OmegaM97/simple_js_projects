@@ -41,6 +41,7 @@ body {
 .location-name {
   font-size: 1.3rem;
   color: rgb(238, 225, 226);
+  text-transform: capitalize;
 }
 
 .app-name {
@@ -106,4 +107,39 @@ sup {
   display: grid;
   place-content: center;
   gap: 15px;
+}
+
+.loading-container {
+  width: 309px;
+  height: 350px;
+  padding: 100px;
+}
+
+.loading-circle {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+  box-shadow: 0 0 20px #3498db;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-para {
+  color: aliceblue;
+  transform: translate(112px, 175px);
+}
+
+.error-message {
+  color: aliceblue;
 }
