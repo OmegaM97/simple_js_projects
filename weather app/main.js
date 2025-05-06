@@ -54,6 +54,7 @@ function searchTheWeather() {
 function renderOnPage() {
   let description = simplifyWeather(weatherInfo.weather[0].description);
   const inputBtn = document.querySelector('.js-search-input');
+  const time = checkDayOrNight(weatherInfo.dt, weatherInfo.timezone);
 
   let contentHTML = `
   <div class="location inner-container">
@@ -62,7 +63,7 @@ function renderOnPage() {
     </div>
 
     <div class="weather-icon inner-container"> 
-      <img src="images/${description}.png" alt="">
+      <img src="images/${time >= 6 && time < 18? description: description + ' night'}.png" alt="">
     </div>
 
     <div class="weather-description inner-container">${description}</div>
@@ -82,6 +83,11 @@ function renderOnPage() {
   .innerHTML = contentHTML;
 }
 
+function checkDayOrNight(dt, timezone) {
+  const time = new Date((dt + timezone) * 1000);
+  return time.getUTCHours();
+}
+
 function simplifyWeather(description) {
   description = description.toLowerCase();
 
@@ -92,7 +98,7 @@ function simplifyWeather(description) {
   const snow = ["light snow", "snow", "heavy snow"];
   const drizzle = ["light intensity drizzle", "drizzle","heavy intensity drizzle", "light intensity drizzle rain", "drizzle rain", "heavy intensity drizzle rain"]
 
-  if (description === "clear sky") return "Sunny";
+  if (description === "clear sky") return "Clear";
   if (cloudy.includes(description)) return "Cloudy";
   if (clouds.includes(description)) return "Partly Cloudy";
   if (rain.includes(description)) return "Rain";
