@@ -15,12 +15,13 @@ body {
 .container {
   min-height: 50vh;
   min-width: 450px;
-  background-image: linear-gradient(rgb(5, 176, 206, 0.5), rgb(9, 79, 209, 0.5), rgb(68, 9, 177,0.5));
+  background-image: linear-gradient(rgb(5, 176, 206, 0.8), rgb(9, 79, 209, 0.8), rgb(68, 9, 177,0.8));
   border-radius: 90px;
   display: grid;
   place-content: center;
   padding: 25px;
   gap: 20px;
+  transition: all 1s ease;
 }
 
 .inner-container {
@@ -65,11 +66,17 @@ body {
 }
 
 .search-button {
-  background-color: rgb(85, 189, 85);
+  background-color: rgb(206, 230, 250);
   border: none;
+  width: 45px;
   transform: translateX(-35px);
-  border-radius: 10px;
+  border-radius: 15px;
   cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #3498db;
+  transition: all 0.2s linear;
 }
 
 .search-icon {
@@ -141,5 +148,53 @@ sup {
 }
 
 .error-message {
+  color: aliceblue;
+}
+
+.sun-riseb {
+  background-image: url(images/sun_rise.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sun-rise {
+  background-image: linear-gradient(rgba(134, 73, 4, 0.8), rgba(141, 109, 2, 0.8));
+}
+
+.sun-setb {
+  background-image: url(images/sun_set.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sun-set {
+  background-image: linear-gradient(rgba(250, 104, 20, 0.7), rgba(39, 13, 1, 0.7));
+}
+
+.nightb {
+  background-image: url(images/night_image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.night {
+  background-image: linear-gradient(rgba(8, 37, 75, 0.7), rgba(2, 8, 27, 0.7));
+}
+
+.dayb {
+  background-image: url(images/day_image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.day {
+  background-image: linear-gradient(rgba(151, 167, 189, 0.8), rgba(2, 49, 10, 0.7));
+}
+
+.time-div {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: grid;
+  place-content: center;
+  font-size: 1.3rem;
   color: aliceblue;
 }

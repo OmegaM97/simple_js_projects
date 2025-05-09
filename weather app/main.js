@@ -63,12 +63,16 @@ function renderOnPage() {
     </div>
 
     <div class="weather-icon inner-container"> 
-      <img src="images/${time >= 6 && time < 18? description: description + ' night'}.png" alt="">
+      <img src="images/${time >= 6 && time <= 18? description: description + ' night'}.png" alt="">
     </div>
 
     <div class="weather-description inner-container">${description}</div>
 
     <br>
+
+    <div class="time-div">Local time: ${checkTime(weatherInfo.dt, weatherInfo.timezone)}</div>
+    </div>
+
     <div class="temprature inner-container">Feels like ${roundNum(weatherInfo.main.feels_like)}<sup>&deg;</sup>C</div>
 
     <div class="humidity inner-container">Humidity: ${weatherInfo.main.humidity}%</div>
@@ -81,11 +85,38 @@ function renderOnPage() {
 
   document.querySelector('.generate-div')
   .innerHTML = contentHTML;
+
+  const container = document.querySelector('.container');
+  const body = document.querySelector('body');
+
+  container.classList.remove('sun-rise', 'day', 'sun-set', 'night');
+  body.classList.remove('sun-riseb', 'dayb', 'sun-setb', 'nightb');
+
+  if (time >= 5 && time <= 7) {
+    container.classList.add('sun-rise');
+    body.classList.add('sun-riseb')
+  } else if (time > 7 && time <= 16) {
+    container.classList.add('day');
+    body.classList.add('dayb')
+  } else if (time > 16 && time < 19) {
+    container.classList.add('sun-set');
+    body.classList.add('sun-setb')
+  } else {
+    container.classList.add('night');
+    body.classList.add('nightb')
+  }
 }
 
 function checkDayOrNight(dt, timezone) {
   const time = new Date((dt + timezone) * 1000);
   return time.getUTCHours();
+}
+
+function checkTime(dt, timezone) {
+  const date = new Date((dt + timezone) * 1000);
+  const hours = date.getUTCHours().toString().padStart(2, '0');
+  const minutes = date.getUTCMinutes().toString().padStart(2, '0');
+  return `${hours}:${minutes}`;
 }
 
 function simplifyWeather(description) {
