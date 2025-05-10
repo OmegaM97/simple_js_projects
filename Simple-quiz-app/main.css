@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-content: center;
+  background-image: linear-gradient(rgb(43, 2, 119), rgb(68, 2, 112));
+}
+
+.container {
+  background-color: aliceblue;
+  min-height: 400px;
+  min-width: 700px;
+  display: grid;
+  padding: 20px;
+  border-radius: 40px;
+}
+
+.question-container {
+  display: grid;
+  place-content: center;
+}
+
+p {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+
+.name {
+  display: grid;
+  place-content: center;
+  color: blue;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.question-inner {
+  width: 600px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 15fr;
+  column-gap: 5px;
+  white-space: wrap;
+  margin: 1.5rem 0;
+  font-size: 1.6rem;
+  color: rgb(148, 42, 4);
+  padding: 10px;
+}
+
+.numnber {
+  align-items: start;
+} 
+
+.choice {
+  display: grid;
+  place-content: center;
+  padding: 15px;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 20fr;
+  border: 2px solid gray;
+  border-radius: 20px;
+  margin: 5px 0;
+  font-size: 1.3rem;
+  color: black;
+  cursor: pointer;
+}
+
+.hover:hover {
+  color: whitesmoke;
+  background-color: black;
+}
+
+.green {
+  background-color: rgb(129, 250, 129);
+}
+
+.red {
+  background-color: rgb(247, 78, 78);
+}
+
+.unclickable {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.next-div {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.next-btn {
+  padding: 10px;
+  font-size: 1.3rem;
+  background-color: rgb(4, 93, 226);
+  border: 2px solid white;
+  color: aliceblue;
+}
+
+.next-btn:hover {
+  border: 2px solid rgb(4, 93, 226);
+  color: rgb(4, 93, 226);
+  background-color: white;
+}
+
+.result,
+.grade {
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+
+.try-again-btn {
+  padding: 10px;
+  font-size: 1.2rem;
+  background-color: rgb(4, 93, 226);
+  border: 2px solid white;
+  color: aliceblue;
+}
+
+.try-again-btn:hover {
+  border: 2px solid rgb(4, 93, 226);
+  color: rgb(4, 93, 226);
+  background-color: white
+}
